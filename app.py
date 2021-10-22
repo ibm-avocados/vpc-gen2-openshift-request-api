@@ -16,7 +16,7 @@ def json():
     GHEKEY=posted_data["GHEKEY"]
     COUNTNUMBER=posted_data["COUNTNUMBER"]
     print(f"This is the apikey: {APIKEY}")
-    os.system("ibmcloud login --apikey {0}".format(APIKEY))
+    os.system("ibmcloud login --apikey {0} -r 'us-south'".format(APIKEY))
     os.system('ibmcloud target -g "Default"')
     os.system('ibmcloud ce project select -n grant-cluster')
     os.system("ibmcloud ce jobrun submit --job vpc-gen2-openshift -a {0} -a {1} -a {2} -a {3}".format(APIKEY,WORKSPACE,GHEKEY,COUNTNUMBER))

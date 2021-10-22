@@ -6,7 +6,8 @@ RUN dnf install -y \
     unzip 
 
 RUN curl -fsSL https://clis.cloud.ibm.com/install/linux | sh && \
-ibmcloud config --check-version=false
+ibmcloud config --check-version=false && \
+ibmcloud plugin install code-engine
 
 COPY app.py /srv/
 COPY requirements.txt /srv/
