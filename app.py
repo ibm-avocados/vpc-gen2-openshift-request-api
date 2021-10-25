@@ -8,8 +8,8 @@ def ping():
     return {"status": "pong"}
 
 
-@app.route('/json',methods=['POST'])
-def json():
+@app.route('/create',methods=['POST'])
+def create():
     posted_data = request.json
     APIKEY=posted_data["APIKEY"]
     WORKSPACE=posted_data["WORKSPACE"]

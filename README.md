@@ -10,7 +10,7 @@ to request the clusters.
 **Example:**
 Create a request:
 ```
-curl -X POST localhost:8080/json -H 'Content-Type: application/json' -d '{"APIKEY": "BLAH", "WORKSPACE": "BLAH2", "GHEKEY": "FakeKEY", "COUNTNUMBER": 10}'
+curl -X POST localhost:8080/create -H 'Content-Type: application/json' -d '{"APIKEY": "BLAH", "WORKSPACE": "BLAH2", "GHEKEY": "FakeKEY", "COUNTNUMBER": 10}'
 ```
 
 Delete a request:
