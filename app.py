@@ -29,6 +29,7 @@ def delete():
     WORKSPACE=posted_data["WORKSPACE"]
     os.system("ibmcloud login --apikey {0} -r 'us-south'".format(APIKEY))
     os.system('ibmcloud target -g "Default"')
+    os.system('ibmcloud plugin install schematics -f')
     os.system("ID_WORKSPACE=$(ibmcloud schematics workspace list | grep {0} | cut -d ' ' -f 4) && ibmcloud schematics destroy --id $ID_WORKSPACE -f ".format(WORKSPACE))
     print("Deleting a workspace...")
     return jsonify(posted_data)
