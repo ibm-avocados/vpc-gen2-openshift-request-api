@@ -20,7 +20,7 @@ curl -X DELETE localhost:8080/delete -H 'Content-Type: application/json' -d '{"A
 
 ## License & Authors
 
-If you would like to see the detailed LICENCE click [here](https://raw.githubusercontent.com/jjasghar/COBOL-on-k8s/master/LICENCE).
+If you would like to see the detailed LICENSE click [here](https://raw.githubusercontent.com/jjasghar/COBOL-on-k8s/master/LICENCE).
 
 - Author: JJ Asghar <awesome@ibm.com>
 
